@@ -15,7 +15,7 @@ class CreateFruitsTable extends Migration
     {
         Schema::create('fruits', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamps();
+            // $table->timestamps();
             $table->char('nom',110); 
             $table->double('kg', 8, 2);   
             $table->double('prix', 8, 2); 

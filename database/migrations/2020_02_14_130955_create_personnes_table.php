@@ -16,11 +16,13 @@ class CreatePersonnesTable extends Migration
         Schema::create('personnes', function (Blueprint $table) {
             $table->bigIncrements('id');
             // $table->timestamps();
-            $table->char('nom',30);
+            $table->char('nom',110);
+            $table->char('prenom',80);;
             $table->integer('age');
             $table->timestamp('dateofbirth');
-            $table->unique('email');
+            $table->string('email', 100);
             $table->smallInteger('phonenumber');
+            $table->boolean('inscris');
         });
     }
 
